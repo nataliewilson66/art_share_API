@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   resources :users do
     resources :artworks, only: :index
   end
+
+  resources :comments, only: [:index, :create, :destroy]
 end
